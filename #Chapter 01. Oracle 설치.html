@@ -1,0 +1,1466 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>#Chapter 01. Oracle 설치</title></head><body><article class="markdown-body"><h1 id="chapter-01-oracle-12c"><a name="user-content-chapter-01-oracle-12c" href="#chapter-01-oracle-12c" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Chapter 01. Oracle 12c 설치</h1>
+<p>본 문서는 Oracle 설치 파일(12.1.0.2.0)을 Target OS(Oracle Linux)로 옮겨졌음을 가정하고 이후 나머지 작업에 대하여 절차를 가이드한다.</p>
+<p>참조 사이트 : <a href="https://oracle-base.com/articles/12c/oracle-db-12cr1-installation-on-oracle-linux-7">Oracle Base</a></p>
+<p><strong>목차</strong></p>
+<div class="toc">
+<ul>
+<li><a href="#chapter-01-oracle-12c">Chapter 01. Oracle 12c 설치</a><ul>
+<li><a href="#0">0. 압축 해제</a></li>
+<li><a href="#1-hosts-file">1. Hosts File 설정</a></li>
+<li><a href="#2-hostname">2. Hostname 설정</a></li>
+<li><a href="#3-manual-setup">3. Manual Setup</a></li>
+<li><a href="#4">4. 추가 설정</a></li>
+<li><a href="#5">5. 설치파일 실행</a></li>
+<li><a href="#6-oui">6. OUI 설치 진행</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="0"><a name="user-content-0" href="#0" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>0. 압축 해제</h2>
+<pre><code>unzip linuxamd64_12102_database_1of2.zip
+unzip linuxamd64_12102_database_2of2.zip
+</code></pre>
+
+<p>압축 해제한 두개의 파일을 database라는 폴더 하나에 합친다.</p>
+<h2 id="1-hosts-file"><a name="user-content-1-hosts-file" href="#1-hosts-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. Hosts File 설정</h2>
+<ul>
+<li>/etc/hosts 파일은 리눅스에서 DNS보다 먼저 호스트명을 IP로 풀어주는 파일이다(이 곳에 등록되어 있는 주소는 DNS로 보내지 않는다).</li>
+</ul>
+<pre><code>&lt;IP-address&gt;  &lt;fully-qualified-machine-name&gt;  &lt;machine-name&gt;
+</code></pre>
+
+<p><strong>For example.</strong></p>
+<pre><code>127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
+</code></pre>
+
+<blockquote>
+<p><strong>1. hosts 파일 내에 실제 IP hostname alias를 적어준다.</strong></p>
+</blockquote>
+<pre><code>10.0.2.15 o17.localdomain o17
+</code></pre>
+
+<h2 id="2-hostname"><a name="user-content-2-hostname" href="#2-hostname" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Hostname 설정</h2>
+<ul>
+<li>/etc/hostname 파일은 hostname을 설정하는 파일이다.</li>
+</ul>
+<p>Tip)<br />
+hostname이란? 인터넷에 접속된 수많은 컴퓨터들이 자신을 구별하기 위해 사용하는 별칭<br />
+ - shell에 hostname이라고 치면 hostname 정보가 나온다.</p>
+<blockquote>
+<p><strong>1. hostname을 기입한다.</strong></p>
+</blockquote>
+<pre><code>o17.localdomain
+</code></pre>
+
+<h2 id="3-manual-setup"><a name="user-content-3-manual-setup" href="#3-manual-setup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. Manual Setup</h2>
+<p>오라클의 공유 메모리는 커널 작업을 수반하지 않으며, 프로세스간의 데이터 복제 작업이 불필요 하기 때문에 IPC를 위한 가장 빠른 방법을 선호한다.</p>
+<p>인스턴스 구조를 보면 SGA와 백그라운드 프로세스로 구성되어 있다. 여기에서 SGA는 Shared Pool, DB Buffer Cache, Redo Log Buffer 등의 저장에 활용되므로 SGA 크기에 따라서 오라클 성능이 달라진다.</p>
+<p>아래 내용은 오라클을 설치하기 이전에 Linux의 커널 매개변수와 shell limit를 설정하는 방법을 알아보고자 한다.</p>
+<blockquote>
+<p><strong>1. Sysctl 설정</strong></p>
+</blockquote>
+<ul>
+<li>/etc/sysctl.conf 파일은 Kernel parameter값을 설정하는 파일이다. 아래와 같이 설정한다.</li>
+</ul>
+<p>Tip) 다른 시스템과 달리 Linux에서는 시스템이 기동중인 상태에서 매개변수 수정이 가능하다. 또한 리부팅을 할 필요도 없다. </p>
+<p>참조 사이트)</p>
+<ul>
+<li><a href="http://linux.systemv.pe.kr/%EB%A6%AC%EB%88%85%EC%8A%A4-%EA%B3%B5%EC%9C%A0-%EB%A9%94%EB%AA%A8%EB%A6%AC/">Linux 공유 메모리 이해</a> </li>
+<li><a href="http://estenpark.tistory.com/270">Oracle 커널 파라미터 및 Limit 설정</a></li>
+</ul>
+<pre><code>fs.file-max = 6815744 *시스템 전체에서 최대로 열 수 있는 파일 개수
+</code></pre>
+
+<pre><code>#세마포어 설정
+
+kernel.sem = 250 32000 100 128
+
+#kernel.sem 하나의 set당 최대 세마포어 개수(SEMMSL), 
+            리눅스 전체 세마포어 개수(SEMMNS),
+            세마 포어 호출별로 수행될 수 있는 세마포어 최대 작업 수(SEMOPM)
+            세마포어 set의 개수 설정(SEMMNI),
+
+ tip) 전체 세마포어 개수 &gt;= set당 최대 세마포어(SEMMSL) * 세마포어 set 개수(SEMMNI)
+
+      세마포어 : 공유 리소스의 사용과정에서 프로세스간의 동기화를 위해 사용되는 카운터로서, 
+      App에서 세마포어를 이용하면 OS는 SET을 통해 세마포어 지원한다.
+
+</code></pre>
+
+<pre><code>#공유 메모리 설정
+
+kernel.shmmni = 4096          * 공유 메모리 최소 세그먼트 크기
+kernel.shmall = 1073741824    * 시스템을 포함한 모든 프로세스에서 사용 가능한 공유 메모리의 최대 크기(페이지 단위)
+kernel.shmmax = 4398046511104 * 공유 메모리 최대 세그먼트 크기
+
+ tip) ipcs -lm 을 확인하면 공유 메모리 크기를 확인할 수 있다.
+ # ipcs -lm
+
+ ------ Shared Memory Limits --------
+ max number of segments = 4096                   &lt;--- SHMMNI
+ max seg size (kbytes) = 4294967296              &lt;--- SHMMAX
+ max total shared memory (kbytes) = 4294967296   &lt;--- SHMALL
+ min seg size (bytes) = 1
+
+여기서 shmall은 단위가 kbytes이고 페이지 단위로 표기
+따라서 kernel shmall 설정값(bytes) * Page 크기 / 1024 값은 ipcs-lm의 SHMALL 값과 같다. 
+
+ tip) system 커널 shmall 크기(bytes) 확인 : cat /proc/sys/kernel/shmall
+      페이지 사이즈 확인 : getconf PAGESIZE
+</code></pre>
+
+<pre><code>kernel.panic_on_oops = 1
+
+#oops란 커널이 오류 로그를 생성하고 비정상이 된 상태
+#패닉이란 내부 오류를 감지하여 안전하게 복구가 불가능할때
+
+위 명령어는 oops를 커널 패닉으로 간주하는 명령어
+</code></pre>
+
+<pre><code>net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+
+#r은 receive를 의미하며 default 소켓에 기본적으로 설정되는 버퍼 크기
+max 최대 크기
+
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+
+#w는 write 의미한다.
+</code></pre>
+
+<pre><code>net.ipv4.conf.all.rp_filter = 2
+net.ipv4.conf.default.rp_filter = 2
+
+#IPv4는 인증 매커니즘을 가지고 있지 않으므로, Source IP 주소를 조작할 수 있다
+#이 설정은 자신의 네트워크가  스푸핑된 공격지의 소스로 쓰이는 것을 차단.
+</code></pre>
+
+<pre><code>fs.aio-max-nr = 1048576 * 현재 시스템 단위의 비동기 IO에 대해 허가된 최대 동시 요청 수
+
+ tip) AIO는 한 프로세스가 몇 개의 IO작업 하는 것을 block하거나 wait없이
+ 허용하는 것으로 IO 완료 알림을 받은 후에 프로세스는 IO결과를 받을 수 있다.
+</code></pre>
+
+<pre><code>net.ipv4.ip_local_port_range = 9000 65500 *사용 가능한 port의 범위 설정
+</code></pre>
+
+<p>설정을 맞췄으면 저장한 후 나와서 변경 내용을 적용한다.</p>
+<pre><code>/sbin/sysctl -p
+</code></pre>
+
+<blockquote>
+<p><strong>2. Shell Limit 설정</strong></p>
+</blockquote>
+<p>오라클은 Linux 계정 별로 실행되는 프로세스와 열린 파일의 수를 제한하는 것을 권장한다. 이를 위해 root계정에서 /etc/security/limits.conf 설정 파일을 수정한다.</p>
+<p>Tip) root로 수정해야하며, 리부팅은 필요없다. </p>
+<p>참조 사이트)</p>
+<ul>
+<li><a href="http://egloos.zum.com/powerenter/v/10980761">Security/limits.conf 파일 이해</a></li>
+</ul>
+<pre><code>oracle   soft   nofile    1024
+oracle   hard   nofile    65536
+oracle   soft   nproc    16384
+oracle   hard   nproc    16384
+oracle   soft   stack    10240
+oracle   hard   stack    32768
+oracle   hard   memlock    134217728
+oracle   soft   memlock    134217728
+</code></pre>
+
+<pre><code>&lt;domain&gt; &lt;type&gt; &lt;item&gt; &lt;value&gt;
+
+domain : 제한을 할 대상으로써 사용자 이름이나 그룹 이름, 그리고 와일드 문자를 사용할 수 있다. 그룹에 적용할 경우에는 @가 붙는다.
+
+type : 제한의 정도를 설정한다. 
+Soft Limit : 새 프로그램이 생성되면 디폴트로 적용되는 제한 값
+Hard Limit : Soft Limit으로부터 늘릴 수 있는 최대값으로 root에서만 조정 가능
+
+item :  제한을 할 항목.
+    - core : core 파일 사이즈(KB)
+    - data : 최대 데이터 크기(KB)
+    - fsize : 최대 파일 사이즈(KB)
+    - memlock : 최대 locked-in-memory 주소 공간(KB)
+    - nofile : 한번에 열 수 있는 최대 파일 수 
+    - rss : 최대 resident set size(KB)
+    - stack : 최대 스택 사이즈(KB)
+    - cpu : 최대 CPU 점유 시간(MIN)
+    - nproc : 최대 프로세스 개수
+    - as : 주소 공간 제한
+    - maxlogins : 동시 로그인 최대 수
+    - priority : 사용자 프로세스가 실행되는 우선 순위
+</code></pre>
+
+<blockquote>
+<p><strong>3. 관련 패키지 설치</strong></p>
+</blockquote>
+<pre><code>yum install binutils -y
+yum install compat-libstdc++-33 -y
+yum install compat-libstdc++-33.i686 -y
+yum install gcc -y
+yum install gcc-c++ -y
+yum install glibc -y
+yum install glibc.i686 -y
+yum install glibc-devel -y
+yum install glibc-devel.i686 -y
+yum install ksh -y
+yum install libgcc -y
+yum install libgcc.i686 -y
+yum install libstdc++ -y
+yum install libstdc++.i686 -y
+yum install libstdc++-devel -y
+yum install libstdc++-devel.i686 -y
+yum install libaio -y
+yum install libaio.i686 -y
+yum install libaio-devel -y
+yum install libaio-devel.i686 -y
+yum install libXext -y
+yum install libXext.i686 -y
+yum install libXtst -y
+yum install libXtst.i686 -y
+yum install libX11 -y
+yum install libX11.i686 -y
+yum install libXau -y
+yum install libXau.i686 -y
+yum install libxcb -y
+yum install libxcb.i686 -y
+yum install libXi -y
+yum install libXi.i686 -y
+yum install make -y
+yum install sysstat -y
+yum install unixODBC -y
+yum install unixODBC-devel -y
+yum install zlib-devel -y
+yum install zlib-devel.i686 -y
+</code></pre>
+
+<blockquote>
+<p><strong>4. Group 및 User 생성</strong></p>
+</blockquote>
+<pre><code>groupadd -g 54321 oinstall
+groupadd -g 54322 dba
+groupadd -g 54323 oper
+groupadd -g 54324 backupdba
+groupadd -g 54325 dgdba
+groupadd -g 54326 kmdba
+groupadd -g 54327 asmdba
+groupadd -g 54328 asmoper
+groupadd -g 54329 asmadmin
+
+useradd -u 54321 -g oinstall -G dba,oper oracle
+</code></pre>
+
+<p>Tip)<br />
+<pre><code>사용자 계정 확인방법
+
+cat /etc/passwd 
+
+root : x : 0 : 0 : root : /root : /bin/bash
+ 1     2   3   4   5      6       7
+
+이렇게 7개의 필드로 구분된다
+각각의 필드에 대한 설명은 아래와 같다.
+
+1. 사용자 계정 ID
+2. 패스워드
+3. 사용자 UID
+4. 그룹 GID
+5. 계정정보(보통은 사용자 이름)
+6. 홈 디렉토리
+7. 쉘 환경
+
+사용자 계정 생성 방법 
+
+useradd &lt;option&gt; 계정명
+
+기본 옵션
+ -u 사용자 계정의 UID
+ -g 사용자 계정 로그인 그룹(그룹은 이미 만들어져 있어야 함)
+ -G 기본 그룹 이외에 추가 지정 그룹
+
+
+그룹 확인
+
+cat /etc/group
+
+root : x : 0
+ 1     2   3
+
+1. 그룹명
+2. 그룹 비밀번호
+3. GID
+
+그룹 생성 방법
+
+groupadd &lt;option&gt; 그룹명
+
+-g : 그룹 ID 지정
+</code></pre></p>
+<h2 id="4"><a name="user-content-4" href="#4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. 추가 설정</h2>
+<blockquote>
+<p><strong>1. 계정 비밀번호 설정</strong></p>
+</blockquote>
+<pre><code>passwd oracle
+</code></pre>
+
+<blockquote>
+<p><strong>2. 방화벽 설정 변경</strong></p>
+</blockquote>
+<p>방화벽을 iptables를 활용한다면 아래와 같이 설정 변경한다.</p>
+<p>/etc/selinux/config 파일에서 selinux flag를 해제한다<br />
+<pre><code>SELINUX=permissive
+</code></pre></p>
+<p>Linux 방화벽 중지<br />
+<pre><code># systemctl stop firewalld
+# systemctl disable firewalld
+</code></pre></p>
+<blockquote>
+<p><strong>3. 오라클 설치를 위한 디렉토리 생성</strong></p>
+</blockquote>
+<pre><code>mkdir -p /u01/app/oracle/product/12.1.0.2/db_1
+chown -R oracle:oinstall /u01
+chmod -R 775 /u01
+</code></pre>
+
+<p>Tip)<br />
+<pre><code>mkdir은 폴더 생성 명령어로 mkdir &lt;option&gt; 폴더명으로 생성할 수 있다.
+-p 옵션은 생성되는 폴더 디렉토리 상에 부모 폴더가 없으면 자동 생성된다.
+
+chown은 소유권을 변경하는 명령어로 chown &lt;option&gt; &lt;소유자&gt;:&lt;그룹&gt; &lt;파일명&gt; 으로 변경할 수 있다.
+-R 옵션은 하위 디렉토리/파일에 모두 적용한다.
+
+chmod는 파일 허가권이다.
+
+d          rwx------    2         root          root             4096 
+파일유형 | 파일허가권 | 링크 수 | 파일 소유자 | 파일 소유 그룹 | 파일 크기 
+
+Mar 6 19:58       Kimeunsoo
+마지막 수정날짜 | 파일이름
+
+파일 허가권은 0~7사이 값이 들어가며 소유자(u), 그룹(g), 그 외 사용자(o)로 별도 부여
+
+없음(-) : 0
+실행(x) : 1
+읽기(r) : 2
+쓰기{w} : 4
+
+7 : r,w,x, 모두 가짐
+
+</code></pre></p>
+<blockquote>
+<p><strong>4. 환경변수 설정</strong></p>
+</blockquote>
+<p>새로 생성한 oracle 계정에 bash_profile 설정을 한다.<br />
+파일 위치 /home/oracle/.bash_profile</p>
+<pre><code># Oracle Settings
+export TMP=/tmp
+export TMPDIR=$TMP
+
+export ORACLE_HOSTNAME=ol7.localdomain
+export ORACLE_UNQNAME=cdb1
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/12.1.0.2/db_1
+export ORACLE_SID=cdb1
+
+export PATH=/usr/sbin:$PATH
+export PATH=$ORACLE_HOME/bin:$PATH
+
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+</code></pre>
+
+<h2 id="5"><a name="user-content-5" href="#5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5. 설치파일 실행</h2>
+<p>oracle 유저로 로그인 한다.<br />
+설치파일 압축 해제 폴더 안에서 runInstaller를 실행한다.<br />
+<pre><code>./runInstaller
+</code></pre></p>
+<h2 id="6-oui"><a name="user-content-6-oui" href="#6-oui" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6. OUI 설치 진행</h2>
+<p>아래 그림대로 설정한다.</p>
+<blockquote>
+<p><strong>1. Configure Security Updates</strong></p>
+</blockquote>
+<p><img alt="1" src="https://oracle-base.com/articles/12c/images/12cR1Database/01-configure-security-updates.jpg" /></p>
+<blockquote>
+<p><strong>2. My Oracle Support Credentials</strong></p>
+</blockquote>
+<p><img alt="2" src="https://oracle-base.com/articles/12c/images/12cR1Database/02-mos-credentials.jpg" /></p>
+<blockquote>
+<p><strong>3. Select Installation Type</strong></p>
+</blockquote>
+<p><img alt="3" src="https://oracle-base.com/articles/12c/images/12cR1Database/04-select-installation-type.jpg" /></p>
+<blockquote>
+<p><strong>4.System Class</strong></p>
+</blockquote>
+<p><img alt="4" src="https://oracle-base.com/articles/12c/images/12cR1Database/05-system-class.jpg" /></p>
+<blockquote>
+<p><strong>5.Grid Installation Options</strong></p>
+</blockquote>
+<p><img alt="5" src="https://oracle-base.com/articles/12c/images/12cR1Database/06-grid-installation-options.jpg" /></p>
+<blockquote>
+<p><strong>6.Select Install Type</strong></p>
+</blockquote>
+<p><img alt="6" src="https://oracle-base.com/articles/12c/images/12cR1Database/07-select-install-type.jpg" /></p>
+<blockquote>
+<p><strong>7.Typicl Install Configuration</strong></p>
+</blockquote>
+<p><img alt="7" src="https://oracle-base.com/articles/12c/images/12cR1Database/08-typical-install-configuration.jpg" /></p>
+<blockquote>
+<p><strong>8.Create Inventory</strong></p>
+</blockquote>
+<p><img alt="8" src="https://oracle-base.com/articles/12c/images/12cR1Database/09-create-inventory.jpg" /></p>
+<blockquote>
+<p><strong>9.Perform Prerequisite Checks</strong></p>
+</blockquote>
+<p><img alt="9" src="https://oracle-base.com/articles/12c/images/12cR1Database/10-perform-prerequisite-checks.jpg" /></p>
+<blockquote>
+<p><strong>10. Summary</strong></p>
+</blockquote>
+<p><img alt="10" src="https://oracle-base.com/articles/12c/images/12cR1Database/11-summary.jpg" /></p>
+<blockquote>
+<p><strong>11. Install Product</strong></p>
+</blockquote>
+<p><img alt="11" src="https://oracle-base.com/articles/12c/images/12cR1Database/12-install-product.jpg" /></p>
+<blockquote>
+<p><strong>12.Execute Configraution Scripts</strong></p>
+</blockquote>
+<p><img alt="12" src="https://oracle-base.com/articles/12c/images/12cR1Database/13-execute-configuration-scripts.jpg" /></p>
+<blockquote>
+<p><strong>13. Oracle Database Configuration</strong></p>
+</blockquote>
+<p><img alt="13" src="https://oracle-base.com/articles/12c/images/12cR1Database/14-oracle-database-configuration.jpg" /></p>
+<blockquote>
+<p>**14. Database Configuration Assistant</p>
+</blockquote>
+<p><img alt="14" src="https://oracle-base.com/articles/12c/images/12cR1Database/15-database-configuration-assistant.jpg" /></p>
+<blockquote>
+<p><strong>15. Database Configuration Assistant Complete</strong></p>
+</blockquote>
+<p><img alt="15" src="https://oracle-base.com/articles/12c/images/12cR1Database/16-database-configuration-assistant-complete.jpg" /></p>
+<blockquote>
+<p><strong>16. Finish</strong></p>
+</blockquote>
+<p><img alt="16" src="https://oracle-base.com/articles/12c/images/12cR1Database/17-finish.jpg" /></p>
+<blockquote>
+<p><strong>17. Database Express 12c Login</strong></p>
+</blockquote>
+<p><img alt="17" src="https://oracle-base.com/articles/12c/images/12cR1Database/18-database-express-12c.jpg" /></p>
+<blockquote>
+<p><strong>18. Database Express 12c Dashboard</strong></p>
+</blockquote>
+<p><img alt="18" src="https://oracle-base.com/articles/12c/images/12cR1Database/19-database-express-12c.jpg" /></p></article></body></html>
